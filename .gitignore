@@ -1,9 +1,0 @@
-### IntelliJ Idea
-.idea/
-
-### Gradle template
-.gradle/
-build/
-
-### Maven template
-target/
