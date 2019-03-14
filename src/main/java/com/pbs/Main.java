@@ -32,6 +32,8 @@ public class Main extends Application {
 
 				if (selectedDirectory == null) {
 					labelSelectedDirectory.setText("No has seleccionat un directori!");
+				} else if (selectedDirectory.isDirectory() && selectedDirectory.list().length == 0) {
+					labelSelectedDirectory.setText("El directori seleccionat està buit!");
 				} else {
 					labelSelectedDirectory.setText(selectedDirectory.getAbsolutePath());
 				}
@@ -39,7 +41,7 @@ public class Main extends Application {
 		});
 
 		// Create the FXMLLoader
-		FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/pbs/fxml/hola.fxml"));
+		FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/pbs/fxml/renamefilesmassive.fxml"));
 
 		// Create the Pane and all Details
 		VBox vBox = loader.load();

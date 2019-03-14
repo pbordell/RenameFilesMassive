@@ -1,9 +1,26 @@
-### IntelliJ Idea
-.idea/
+HELP.md
+/target/
+!.mvn/wrapper/maven-wrapper.jar
 
-### Gradle template
-.gradle/
-build/
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
 
-### Maven template
-target/
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+/build/
