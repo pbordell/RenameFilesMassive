@@ -4,7 +4,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox fx:id="vbox" layoutX="10.0" layoutY="10.0" prefHeight="250.0" prefWidth="300.0" spacing="10" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.pbs.controller.RenameFilesMassiveController">
+<VBox fx:id="vbox" layoutX="10.0" layoutY="10.0" prefHeight="400.0" prefWidth="600.0" spacing="10" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.pbs.controller.RenameFilesMassiveController">
   <style>
 	-fx-padding: 10;
 	-fx-border-style: solid inside;
@@ -13,13 +13,17 @@
 	-fx-border-radius: 5;
 	-fx-border-color: blue;
   </style>
+  
   <children>
-    <Label fx:id="inputLbl" alignment="CENTER_LEFT" cache="true" cacheHint="SCALE" prefHeight="30.0" prefWidth="300.0" text="Inserte el texto que quiere modificar" textAlignment="LEFT" />
-    <TextField fx:id="inputText" prefWidth="100.0" />
-    <Label fx:id="inputLbl2" alignment="CENTER_LEFT" cache="true" cacheHint="SCALE" prefHeight="30.0" prefWidth="200.0" text="Inserte el texto modificado" textAlignment="LEFT" />
-    <TextField fx:id="inputText2" prefWidth="100.0" />
-    <Button fx:id="okBtn" alignment="CENTER_RIGHT" contentDisplay="CENTER" mnemonicParsing="false" text="Canviar" textAlignment="CENTER" onAction="#changeAction" />
-    <Label fx:id="outputLbl" alignment="CENTER_LEFT" cache="true" cacheHint="SCALE" prefHeight="30.0" prefWidth="200.0" text="Your Input:" textAlignment="LEFT" />
-    <TextArea fx:id="outputText" prefHeight="100.0" prefWidth="200.0" wrapText="true" />
+    <TextField fx:id="directoryTextField" editable="false" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="60.0" />
+    <Button text="Cargar directorio" AnchorPane.rightAnchor="0.0" onAction="#handleChangeDirectoryBtnClick"/>
+    <Label fx:id="inputLbl" alignment="CENTER_LEFT" cache="true" cacheHint="SCALE" prefHeight="30.0" prefWidth="300.0" text="Inserte el texto que quiere modificar:" textAlignment="LEFT" />
+    <TextField fx:id="inputTextToChange" prefWidth="100.0" />
+    <Label fx:id="inputLbl2" alignment="CENTER_LEFT" cache="true" cacheHint="SCALE" prefHeight="30.0" prefWidth="200.0" text="Inserte el texto modificado:" textAlignment="LEFT" />
+    <TextField fx:id="inputTextChanged" prefWidth="100.0" />
+    <Button fx:id="okBtn" alignment="CENTER_RIGHT" contentDisplay="CENTER" mnemonicParsing="false" text="Cambiar" textAlignment="CENTER" onAction="#changeAction" />
+    <Label fx:id="outputLbl" alignment="CENTER_LEFT" cache="true" cacheHint="SCALE" prefHeight="30.0" prefWidth="200.0" text="Salida:" textAlignment="LEFT" />
+    <TextArea fx:id="outputText" editable="false" prefHeight="300.0" prefWidth="500.0" wrapText="true" />
   </children>
+
 </VBox>
